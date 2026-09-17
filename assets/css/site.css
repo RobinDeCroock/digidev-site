@@ -2,6 +2,7 @@
   /* brand */
   --navy: #101D42;
   --blue: #232ED1;
+  --accent: #7C84F2;   /* dark surfaces only: it fails contrast on paper */
   --badge: #C9CDF9;
   --paper: #F4F5F9;
 
@@ -107,16 +108,18 @@ h1 {
 
 /* ---------- blue band ---------- */
 
-.band { background: var(--blue); color: #fff; padding: 4rem 0; }
+/* the one dark block on the page: navy, not blue, so white type on it does
+   not vibrate and blue keeps meaning "you can click this" */
+.band { background: var(--navy); color: #fff; padding: 4rem 0; }
 .band h2 {
   margin: 0 0 2.5rem; font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700; letter-spacing: -0.02em;
   max-width: 30rem; line-height: 1.15;
 }
 .claims { display: grid; gap: 2rem; }
-.claim { border-left: 2px solid rgba(255, 255, 255, 0.45); padding-left: 1.25rem; }
+.claim { border-left: 2px solid var(--accent); padding-left: 1.25rem; }
 .claim h3 { margin: 0 0 0.4rem; font-size: 1.0625rem; font-weight: 600; }
-.claim p { margin: 0; font-size: 0.9375rem; color: rgba(255, 255, 255, 0.88); }
+.claim p { margin: 0; font-size: 0.9375rem; color: var(--badge); }
 
 /* ---------- text sections ---------- */
 

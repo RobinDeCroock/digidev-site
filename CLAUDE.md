@@ -27,15 +27,19 @@ exclamation marks. Say what a thing does, then say what it refuses to do.
 ## Design
 
 Tokens live at the top of `assets/css/site.css` and come from the brand: `#F4F5F9` for the page,
-white for raised panels, navy `#101D42` for headings and body text, blue `#232ED1` for links,
-buttons, small labels and the band, `#C9CDF9` for the price badge. Secondary text is muted navy
-(`--ink-soft`, `--ink-faint`), not a brand colour, and every one of them clears 4.5:1 on paper.
+white for raised panels, navy `#101D42` for headings, body text and the band, `#C9CDF9` for
+secondary text on the band and for the price badge. Secondary text on paper is muted navy
+(`--ink-soft`, `--ink-faint`), not a brand colour, and every one of them clears 4.5:1.
 Space Grotesk throughout, loaded from Google Fonts — allowed here, never inside a WordPress admin.
 
+Blue `#232ED1` means one thing only: you can act on this. Links, buttons and the small section
+labels. Do not use it for a surface — white on saturated blue over a full-width band vibrates,
+which is why the band is navy. `#7C84F2` is the accent for dark surfaces, so it appears on the
+band and in the favicon tile, never on paper, where it fails contrast.
+
 The site is light and has no dark mode. Do not add one on a whim; it would mean reworking every
-token. The page stays neutral so the blue band is the only loud surface: one strong colour block
-per page, nothing else competing with it. `#7C84F2` is a dark-surface accent and is used only in
-the navy favicon tile, never on the page.
+token. The page stays neutral so the navy band is the only dark block: one strong surface per
+page, nothing else competing with it.
 
 Reuse the existing components (`.ledger`, `.band`, `.claims`, `.plugin`, `.steps`, `.codes`,
 `.note`, `.facts`) before inventing new ones. One accent per page at most.
