@@ -53,6 +53,10 @@ Reuse the existing components (`.ledger`, `.band`, `.claims`, `.plugin`, `.steps
 - Do not invent facts about a plugin. Versions, permissions, shortcodes and settings on a plugin
   page must match what the plugin actually does; check its repository or its settings screen.
 - Do not claim a plugin is on WordPress.org before it is.
+- The plugin repositories are private and are expected to stay private, so the site never promises
+  source on GitHub. What makes a plugin checkable is that WordPress.org publishes the PHP that
+  runs; write the claim that way. Support is email until a plugin has a WordPress.org support
+  forum. The GitHub link in the contact list is a profile link and nothing more.
 - Placeholders are written in capitals (`GITHUB-USERNAME`, `KOFI-NAME`) and listed in the README.
   Never guess a real URL to fill one in.
 

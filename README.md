@@ -51,13 +51,12 @@ page loses its styling; nothing else breaks.
 
 Search the HTML for `TODO`. Currently:
 
-- `REPO-NAME` in the plugin page's "Report an issue" button, once the plugin's own repository
-  exists. The GitHub account is `RobinDeCroock` and the Ko-fi page is `robindecroock`; both are
-  already filled in everywhere else.
 - `WORDPRESS-ORG-USERNAME` in `index.html`, in the profile link that stays commented out until the
   first plugin is published. WordPress.org is a separate account, so it is not necessarily the
   GitHub name.
 - Plugin status is hard-coded as "In development" in two places; change both when it goes live.
+- The WordPress.org support forum link on the plugin page, once the plugin is published. Until
+  then the "Report an issue" button is a mailto, on purpose.
 
 ## Adding a plugin
 
