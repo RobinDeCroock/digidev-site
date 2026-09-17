@@ -40,9 +40,11 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-ra
 
 /* ---------- masthead ---------- */
 
+/* wraps rather than pushing the page wider than the screen */
 .masthead {
   display: flex; align-items: center; justify-content: space-between;
-  gap: 1rem; padding: 1.75rem 0;
+  flex-wrap: wrap; gap: 0.75rem 1rem;
+  padding-top: 1.75rem; padding-bottom: 1.75rem;
 }
 .brand {
   display: flex; align-items: center; gap: 0.7rem;
@@ -50,13 +52,13 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-ra
   font-weight: 600; letter-spacing: -0.01em;
 }
 .brand svg { width: 1.9rem; height: auto; display: block; }
-.masthead nav { display: flex; gap: 1.5rem; font-size: 0.9375rem; font-weight: 500; }
+.masthead nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-size: 0.9375rem; font-weight: 500; }
 .masthead nav a { color: var(--ink-soft); text-decoration: none; }
 .masthead nav a:hover { color: var(--ink); }
 
 /* ---------- hero ---------- */
 
-.hero { padding: 3.5rem 0 5rem; }
+.hero { padding-top: 3.5rem; padding-bottom: 5rem; }
 .hero-grid { display: grid; gap: 3rem; }
 
 h1 {
@@ -118,7 +120,7 @@ h1 {
 
 /* ---------- text sections ---------- */
 
-.section { padding: 5rem 0; border-bottom: 1px solid var(--rule); }
+.section { padding-top: 5rem; padding-bottom: 5rem; border-bottom: 1px solid var(--rule); }
 .section:last-of-type { border-bottom: none; }
 .section-head { font-size: 0.9375rem; font-weight: 500; color: var(--blue); margin: 0 0 1.5rem; }
 .section h2.title {
@@ -157,7 +159,7 @@ h1 {
 .contact-list span { font-weight: 400; font-size: 0.9375rem; color: var(--ink-soft); }
 
 .page-footer {
-  padding: 2.5rem 0 3rem; border-top: 1px solid var(--rule);
+  padding-top: 2.5rem; padding-bottom: 3rem; border-top: 1px solid var(--rule);
   font-size: 0.875rem; color: var(--ink-faint);
   display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: space-between;
 }
@@ -167,11 +169,12 @@ h1 {
 
 @media (min-width: 54rem) {
   body { font-size: 18px; }
-  .hero { padding: 5rem 0 7rem; }
+  .masthead nav { gap: 1.5rem; }
+  .hero { padding-top: 5rem; padding-bottom: 7rem; }
   .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 4.5rem; align-items: center; }
   .claims { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
   .plugin { grid-template-columns: 1fr auto; align-items: start; }
-  .section { padding: 6rem 0; }
+  .section { padding-top: 6rem; padding-bottom: 6rem; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -206,7 +209,7 @@ h1 {
    ========================================================================== */
 
 .subhead {
-  padding: 2rem 0 3.5rem;
+  padding-top: 2rem; padding-bottom: 3.5rem;
   border-bottom: 1px solid var(--rule);
 }
 .crumb {
@@ -325,6 +328,6 @@ code {
 .plugin a.title-link:hover { color: var(--blue); text-decoration: underline; }
 
 @media (min-width: 54rem) {
-  .subhead { padding: 2rem 0 4.5rem; }
+  .subhead { padding-bottom: 4.5rem; }
   .codes div { grid-template-columns: 22rem 1fr; gap: 1.5rem; align-items: baseline; }
 }
