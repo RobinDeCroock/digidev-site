@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>One Folder Gallery for OneDrive — DigiDev</title>
+<meta name="description" content="A WordPress gallery that reads photos from one OneDrive folder and can reach nothing else in the account. Free and open source.">
+<meta property="og:title" content="One Folder Gallery for OneDrive">
+<meta property="og:description" content="A WordPress gallery that reads photos from one OneDrive folder and can reach nothing else in the account.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23101D42'/%3E%3Cg transform='translate(96 96) scale(2.222222)'%3E%3Cpath fill='%23FFFFFF' d='M110.11,33.89c-7.23-3.27-15.26-5.09-23.71-5.09H28.8V115.2H0V0H57.6c23.36,0,43.47,13.9,52.51,33.89Z'/%3E%3Cpath fill='%237C84F2' d='M144,86.4c0,31.81-25.79,57.6-57.6,57.6H28.8v-28.8h28.8c31.81,0,57.6-25.79,57.6-57.6,0-8.45-1.82-16.48-5.09-23.71,19.99,9.04,33.89,29.15,33.89,52.51Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body>
+
+<header class="wrap masthead">
+  <a class="brand" href="../../">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" role="img" aria-label="DigiDev logo">
+      <path fill="#FFFFFF" d="M110.11,33.89c-7.23-3.27-15.26-5.09-23.71-5.09H28.8V115.2H0V0H57.6c23.36,0,43.47,13.9,52.51,33.89Z"/>
+      <path fill="#7C84F2" d="M144,86.4c0,31.81-25.79,57.6-57.6,57.6H28.8v-28.8h28.8c31.81,0,57.6-25.79,57.6-57.6,0-8.45-1.82-16.48-5.09-23.71,19.99,9.04,33.89,29.15,33.89,52.51Z"/>
+    </svg>
+    DigiDev
+  </a>
+  <nav>
+    <a href="../../#plugins">Plugins</a>
+    <a href="../../#approach">Approach</a>
+    <a href="../../#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="wrap subhead">
+    <a class="crumb" href="../../#plugins">Back to plugins</a>
+    <h1>One Folder Gallery for OneDrive</h1>
+    <p class="lede">Put your photos in one OneDrive folder, get albums and a lightbox on your
+    WordPress site. The plugin cannot open anything else in your OneDrive, because Microsoft
+    never gives it a key to the rest.</p>
+    <dl class="facts">
+      <div><dt>Status</dt><dd>In development</dd></div>
+      <div><dt>Price</dt><dd>Free</dd></div>
+      <div><dt>Licence</dt><dd>GPLv2 or later</dd></div>
+      <div><dt>Account needed</dt><dd>Your own Microsoft account</dd></div>
+    </dl>
+  </section>
+
+  <section class="wrap section">
+    <p class="section-head">Access</p>
+    <h2 class="title">The whole point is what it can't do</h2>
+    <div class="prose prose-before-list">
+      <p>Most gallery plugins that connect to a cloud drive ask to read your entire account. This one
+      asks for an app folder: a single directory that Microsoft creates for it and walls off. Requests
+      for anything outside that folder are refused by Microsoft's API, not by the plugin's own code, so
+      a bug in the plugin cannot widen the hole.</p>
+    </div>
+
+    <div class="ledger">
+      <div class="ledger-block is">
+        <h2>It can reach</h2>
+        <ul>
+          <li><span class="glyph">+</span>Its own app folder in your OneDrive</li>
+          <li><span class="glyph">+</span>The albums and photos you put there</li>
+          <li><span class="glyph">+</span>A refresh token, stored encrypted on your site</li>
+        </ul>
+      </div>
+      <div class="ledger-block isnt">
+        <h2>It can never reach</h2>
+        <ul>
+          <li><span class="glyph">&minus;</span>The rest of your OneDrive</li>
+          <li><span class="glyph">&minus;</span>Your mail, calendar or contacts</li>
+          <li><span class="glyph">&minus;</span>Anything belonging to other people in your organisation</li>
+          <li><span class="glyph">&minus;</span>Any server of mine, because there isn't one</li>
+        </ul>
+      </div>
+    </div>
+    <p class="scopes">Files.ReadWrite.AppFolder · offline_access</p>
+  </section>
+
+  <section class="wrap section">
+    <p class="section-head">Setup</p>
+    <h2 class="title">Five minutes, once</h2>
+    <ol class="steps">
+      <li>
+        <h3>Install and open the settings</h3>
+        <p>Settings &rarr; One Folder Gallery for OneDrive in your WordPress admin.</p>
+      </li>
+      <li>
+        <h3>Connect your Microsoft account</h3>
+        <p>You sign in at Microsoft. Your password never touches your website.</p>
+      </li>
+      <li>
+        <h3>Check or create the app folder</h3>
+        <p>One button. This is the only folder the plugin will ever see.</p>
+      </li>
+      <li>
+        <h3>Add photos in OneDrive</h3>
+        <p>Every subfolder of the app folder becomes an album. Rename a folder, rename an album.</p>
+      </li>
+      <li>
+        <h3>Put a shortcode on a page</h3>
+        <p>Publish, and the gallery is live.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="wrap section">
+    <p class="section-head">Shortcodes</p>
+    <h2 class="title">Three of them, that's the whole API</h2>
+    <dl class="codes">
+      <div>
+        <dt><code>[one_folder_gallery]</code></dt>
+        <dd>Lists every album in the app folder.</dd>
+      </div>
+      <div>
+        <dt><code>[one_folder_gallery folder_id="…"]</code></dt>
+        <dd>Shows the photos in one album.</dd>
+      </div>
+      <div>
+        <dt><code>[one_folder_gallery folder_id="…" cols="4"]</code></dt>
+        <dd>Sets the number of columns, from 1 to 6.</dd>
+      </div>
+    </dl>
+
+    <div class="note">
+      <h3>Thumbnail size</h3>
+      <p>Settings offers 400 px thumbnails by default. Larger ones look better and load more slowly;
+      the images themselves are served by Microsoft, not by your host.</p>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <p class="section-head">Company accounts</p>
+    <h2 class="title">If your IT department says no</h2>
+    <div class="prose">
+      <p>Some organisations block third-party applications by default. In that case you can register
+      the application yourself in your own tenant, enable public client flows, grant it
+      <code>Files.ReadWrite.AppFolder</code> and <code>offline_access</code>, and paste the application
+      ID into the plugin's advanced setting. No client secret is needed.</p>
+      <p>Everything else stays the same, and the access stays just as narrow. Changing this setting
+      disconnects the account that is currently connected.</p>
+    </div>
+  </section>
+
+  <section class="wrap section">
+    <p class="section-head">Support</p>
+    <h2 class="title">Issues in writing, answered when I can</h2>
+    <div class="prose prose-before-list">
+      <p>Bug reports and questions go to GitHub, where everyone can read the answer. There is no
+      support desk and no phone number. If the plugin saves you a job, a one-off tip is welcome and
+      buys you nothing extra — no priority, no hidden features, no tiers.</p>
+    </div>
+    <div class="cta-row">
+      <!-- TODO: fill in GitHub username and repository -->
+      <a class="button" href="https://github.com/GITHUB-USERNAME/one-folder-gallery/issues">Report an issue</a>
+      <!-- TODO: fill in Ko-fi page -->
+      <a class="support" href="https://ko-fi.com/KOFI-NAME">Leave a tip</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap page-footer">
+  <p>DigiDev · digital-development.be</p>
+  <p>Belgium</p>
+</footer>
+
+</body>
+</html>

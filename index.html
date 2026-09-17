@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DigiDev — small WordPress plugins, minimal access</title>
+<meta name="description" content="DigiDev builds small WordPress plugins that do one thing and ask for the least access they can get away with. Free and open source.">
+<meta property="og:title" content="DigiDev">
+<meta property="og:description" content="Small WordPress plugins that do one thing and ask for the least access they can get away with.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23101D42'/%3E%3Cg transform='translate(96 96) scale(2.222222)'%3E%3Cpath fill='%23FFFFFF' d='M110.11,33.89c-7.23-3.27-15.26-5.09-23.71-5.09H28.8V115.2H0V0H57.6c23.36,0,43.47,13.9,52.51,33.89Z'/%3E%3Cpath fill='%237C84F2' d='M144,86.4c0,31.81-25.79,57.6-57.6,57.6H28.8v-28.8h28.8c31.81,0,57.6-25.79,57.6-57.6,0-8.45-1.82-16.48-5.09-23.71,19.99,9.04,33.89,29.15,33.89,52.51Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
+
+<header class="wrap masthead">
+  <a class="brand" href="#top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" role="img" aria-label="DigiDev logo">
+      <path fill="#FFFFFF" d="M110.11,33.89c-7.23-3.27-15.26-5.09-23.71-5.09H28.8V115.2H0V0H57.6c23.36,0,43.47,13.9,52.51,33.89Z"/>
+      <path fill="#7C84F2" d="M144,86.4c0,31.81-25.79,57.6-57.6,57.6H28.8v-28.8h28.8c31.81,0,57.6-25.79,57.6-57.6,0-8.45-1.82-16.48-5.09-23.71,19.99,9.04,33.89,29.15,33.89,52.51Z"/>
+    </svg>
+    DigiDev
+  </a>
+  <nav>
+    <a href="#plugins">Plugins</a>
+    <a href="#approach">Approach</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <h1>Small plugins that ask for very little.</h1>
+        <p>DigiDev makes WordPress plugins that each do one thing and request the least access the
+        platform allows. Free on WordPress.org, source on GitHub, no accounts to create.</p>
+        <div class="hero-actions">
+          <a class="button" href="#plugins">See what's coming</a>
+          <!-- TODO: fill in GitHub username -->
+          <a class="quiet-link" href="https://github.com/GITHUB-USERNAME">Read the source</a>
+        </div>
+      </div>
+
+      <div class="ledger">
+        <div class="ledger-block is">
+          <h2>What DigiDev is</h2>
+          <ul>
+            <li><span class="glyph">+</span>One-purpose WordPress plugins</li>
+            <li><span class="glyph">+</span>Free, GPL, readable PHP</li>
+            <li><span class="glyph">+</span>The narrowest permission that does the job</li>
+            <li><span class="glyph">+</span>Support in writing, on GitHub</li>
+          </ul>
+        </div>
+        <div class="ledger-block isnt">
+          <h2>What it isn't</h2>
+          <ul>
+            <li><span class="glyph">&minus;</span>Client work or custom development</li>
+            <li><span class="glyph">&minus;</span>Monthly subscriptions</li>
+            <li><span class="glyph">&minus;</span>A hosted service with your data on it</li>
+            <li><span class="glyph">&minus;</span>An all-in-one suite</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>Three rules every plugin follows</h2>
+      <div class="claims">
+        <div class="claim">
+          <h3>Least access</h3>
+          <p>A plugin gets the smallest scope the platform offers, even when a broader one would be
+          easier to build against.</p>
+        </div>
+        <div class="claim">
+          <h3>Nothing stored twice</h3>
+          <p>Your data stays where it already lives. No copies on your web server, and none on mine,
+          because there is no server of mine.</p>
+        </div>
+        <div class="claim">
+          <h3>Readable, not minified</h3>
+          <p>Plain PHP on WordPress.org and on GitHub, so you can check what a plugin sends before you
+          install it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="approach">
+    <p class="section-head">Approach</p>
+    <h2 class="title">Most plugins ask for far more than they use</h2>
+    <div class="prose">
+      <p>Install something that connects WordPress to a cloud service and you are usually asked to grant
+      access to everything in the account. That is convenient to build and hard to justify. If the plugin
+      is compromised, or the developer's app registration is, the blast radius is the whole account.</p>
+      <p>Narrower options almost always exist. An app-scoped folder, a read-only token, a single resource
+      instead of a directory. They cost some flexibility and a lot more work, and they mean the plugin
+      cannot reach anything you didn't hand it, even if it has a bug.</p>
+      <p>That is the whole product idea, and it is also why each plugin stays small. One plugin, one job,
+      one permission. If you want a suite that does everything, I'm not building that.</p>
+    </div>
+  </section>
+
+  <section class="wrap section" id="plugins">
+    <p class="section-head">Plugins</p>
+    <h2 class="title">What I'm building</h2>
+
+    <div class="plugin">
+      <div>
+        <h3><a class="title-link" href="plugins/one-folder-gallery/">One Folder Gallery for OneDrive</a></h3>
+        <p>Shows the photos from one OneDrive folder as a gallery on your site, with albums and a
+        lightbox. It can only reach its own folder: Microsoft refuses the rest at the API level.</p>
+        <p class="scopes">Files.ReadWrite.AppFolder · offline_access</p>
+      </div>
+      <span class="status">In development</span>
+    </div>
+
+    <div class="prose prose-after-list">
+      <p>Nothing is published on WordPress.org yet. The first plugin will be free, and this list will
+      link to it once it clears review. More will follow the same pattern.</p>
+    </div>
+  </section>
+
+  <section class="wrap section" id="contact">
+    <p class="section-head">Contact</p>
+    <h2 class="title">Written support, no calls</h2>
+    <div class="prose prose-before-list">
+      <p>I'm Robin De Croock, a Power Platform developer in Belgium. DigiDev is what I build in my own time, on my
+      own hardware. I don't take client work or custom development — only products anyone can install.</p>
+    </div>
+    <ul class="contact-list">
+      <!-- TODO: fill in GitHub username -->
+      <li><a href="https://github.com/GITHUB-USERNAME">GitHub</a><span>Source code and issues</span></li>
+      <li><a href="mailto:info@digital-development.be">info@digital-development.be</a><span>Email, answered when I can</span></li>
+      <!-- TODO: add once the first plugin is published
+      <li><a href="https://profiles.wordpress.org/GITHUB-USERNAME/">WordPress.org</a><span>Published plugins</span></li>
+      -->
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap page-footer">
+  <p>DigiDev · digital-development.be</p>
+  <p>Belgium</p>
+</footer>
+
+</body>
+</html>
