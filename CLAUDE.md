@@ -26,13 +26,16 @@ exclamation marks. Say what a thing does, then say what it refuses to do.
 
 ## Design
 
-Tokens live at the top of `assets/css/site.css` and come from the brand: navy `#101D42` on the
-page, `#0B142F` for raised panels, blue `#232ED1` for buttons and the band, `#7C84F2` for accents
-and links, `#C9CDF9` for secondary text, `#F4F5F9` for body text on navy. Space Grotesk throughout,
-loaded from Google Fonts — allowed here, never inside a WordPress admin.
+Tokens live at the top of `assets/css/site.css` and come from the brand: `#F4F5F9` for the page,
+white for raised panels, navy `#101D42` for headings and body text, blue `#232ED1` for links,
+buttons, small labels and the band, `#C9CDF9` for the price badge. Secondary text is muted navy
+(`--ink-soft`, `--ink-faint`), not a brand colour, and every one of them clears 4.5:1 on paper.
+Space Grotesk throughout, loaded from Google Fonts — allowed here, never inside a WordPress admin.
 
-The site is dark by default and has no light mode. Do not add one on a whim; it would mean
-reworking every token.
+The site is light and has no dark mode. Do not add one on a whim; it would mean reworking every
+token. The page stays neutral so the blue band is the only loud surface: one strong colour block
+per page, nothing else competing with it. `#7C84F2` is a dark-surface accent and is used only in
+the navy favicon tile, never on the page.
 
 Reuse the existing components (`.ledger`, `.band`, `.claims`, `.plugin`, `.steps`, `.codes`,
 `.note`, `.facts`) before inventing new ones. One accent per page at most.
