@@ -51,9 +51,12 @@ page loses its styling; nothing else breaks.
 
 Search the HTML for `TODO`. Currently:
 
-- `GITHUB-USERNAME` in `index.html` and `plugins/one-folder-gallery/index.html`.
-- `KOFI-NAME` in the plugin page.
-- The WordPress.org profile link in `index.html`, commented out until the first plugin is published.
+- `REPO-NAME` in the plugin page's "Report an issue" button, once the plugin's own repository
+  exists. The GitHub account is `RobinDeCroock` and the Ko-fi page is `robindecroock`; both are
+  already filled in everywhere else.
+- `WORDPRESS-ORG-USERNAME` in `index.html`, in the profile link that stays commented out until the
+  first plugin is published. WordPress.org is a separate account, so it is not necessarily the
+  GitHub name.
 - Plugin status is hard-coded as "In development" in two places; change both when it goes live.
 
 ## Adding a plugin
