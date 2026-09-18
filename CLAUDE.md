@@ -30,7 +30,8 @@ Tokens live at the top of `assets/css/site.css` and come from the brand: `#F4F5F
 white for raised panels, navy `#101D42` for headings, body text and the band, `#C9CDF9` for
 secondary text on the band and for the price badge. Secondary text on paper is muted navy
 (`--ink-soft`, `--ink-faint`), not a brand colour, and every one of them clears 4.5:1.
-Space Grotesk throughout, loaded from Google Fonts — allowed here, never inside a WordPress admin.
+Space Grotesk throughout, self-hosted from `assets/fonts/`, never from a font CDN and never
+inside a WordPress admin.
 
 Blue `#232ED1` means one thing only: you can act on this. Links, buttons and the small section
 labels. Do not use it for a surface — white on saturated blue over a full-width band vibrates,
@@ -48,8 +49,13 @@ Reuse the existing components (`.ledger`, `.band`, `.claims`, `.plugin`, `.steps
 
 - Relative paths between pages, so the site also works at `<username>.github.io/digidev-site`.
   `404.html` is the exception and uses absolute paths, because GitHub serves it from any depth.
-- No analytics, no tracking, no cookies, no embedded third-party widgets. Google Fonts is the only
-  external request, and it is a deliberate one.
+- No analytics, no tracking, no cookies, no embedded third-party widgets, and no request to any
+  other company at all: not a font, not a script, not an image. Outbound links are fine, an
+  embedded resource is not. Adding one means changing `privacy/index.html` in the same commit,
+  and the claim that this site asks nobody anything is worth more than whatever the resource does.
+- Every page carries the footer with the enterprise number and the privacy link. `privacy/` has to
+  stay true: if a page starts collecting something, it is described there before it ships.
+  The business address is deliberately not on the site; VLAIO confirmed it is not required.
 - Do not invent facts about a plugin. Versions, permissions, shortcodes and settings on a plugin
   page must match what the plugin actually does; check its repository or its settings screen.
 - Do not claim a plugin is on WordPress.org before it is.

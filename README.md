@@ -11,17 +11,24 @@ index.html                     Home: what DigiDev is, the three rules, the plugi
 CNAME                          Custom domain for GitHub Pages
 .nojekyll                      Serve the files as they are, skip Jekyll
 assets/css/site.css            The whole stylesheet
+assets/fonts/                  Space Grotesk, self-hosted, with its OFL licence
 assets/img/                    Images, currently empty; the logo is inline SVG
 plugins/<slug>/index.html      One page per plugin
+privacy/index.html             Privacy statement, linked from every footer
 docs/                          Notes that are not part of the site
 ```
+
+The font is served from `assets/fonts/` on purpose: the site makes no request to any other
+company, so there is nothing to disclose and no consent to ask. Do not replace it with a font CDN.
+Two `woff2` files cover weights 300 to 700, one for latin and one for latin-ext; the `@font-face`
+rules sit at the top of the stylesheet, and `OFL.txt` must stay next to them.
 
 The logo is an inline SVG in each page's `<header>` and a data URI in the favicon `<link>`. There
 is no image file to lose.
 
 ## Publishing
 
-1. Create a repository on GitHub and push this directory to it.
+1. The repository is `RobinDeCroock/digidev-site`, public, with `origin` already set.
 2. Settings → Pages → Source: *Deploy from a branch*, branch `main`, folder `/ (root)`.
 3. Settings → Pages → Custom domain: `digital-development.be`, then tick *Enforce HTTPS* once the
    certificate is issued. This can take up to an hour.
