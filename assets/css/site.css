@@ -77,8 +77,16 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-ra
 }
 .brand svg { width: 1.9rem; height: auto; display: block; }
 .masthead nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-size: 0.9375rem; font-weight: 500; }
-.masthead nav a { color: var(--ink-soft); text-decoration: none; }
+.masthead nav a { position: relative; color: var(--ink-soft); text-decoration: none; }
 .masthead nav a:hover { color: var(--ink); }
+.masthead nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -0.35rem;
+  height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left;
+}
+.masthead nav a:hover::after, .masthead nav a:focus-visible::after { transform: scaleX(1); }
+@media (prefers-reduced-motion: no-preference) {
+  .masthead nav a::after { transition: transform 0.18s ease; }
+}
 
 /* ---------- hero ---------- */
 
@@ -186,6 +194,10 @@ h1 {
   padding: 1rem 0; color: var(--ink); text-decoration: none; font-weight: 500;
 }
 .contact-list a:hover { color: var(--blue); }
+@media (prefers-reduced-motion: no-preference) {
+  .contact-list a { transition: color 0.15s ease, transform 0.15s ease; }
+  .contact-list a:hover { transform: translateX(3px); }
+}
 .contact-list span { font-weight: 400; font-size: 0.9375rem; color: var(--ink-soft); }
 
 .page-footer {
@@ -213,23 +225,23 @@ h1 {
 }
 
 @keyframes arrive {
-  from { transform: translateY(10px); }
-  to { transform: none; }
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .hero .ledger { animation: settle 0.55s ease-out both 0.1s; }
 
   /* Everything else arrives as you reach it. Scroll-driven, so no JavaScript and
-     no observer; browsers without the timeline simply show the page. This moves
-     the block and never fades it: if a timeline ever misbehaves, the worst case
-     is text sitting ten pixels low, not text nobody can read. */
+     no observer; browsers without the timeline simply show the page. The range
+     ends early on purpose: by the time a block is halfway into the viewport it is
+     done, so nothing you are trying to read is still moving or faint. */
   @supports (animation-timeline: view()) {
     .section > *,
     .band .claim {
       animation: arrive linear both;
       animation-timeline: view();
-      animation-range: entry 10% entry 45%;
+      animation-range: entry 5% entry 50%;
     }
   }
 }
