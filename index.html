@@ -94,12 +94,13 @@
     <p class="section-head">Approach</p>
     <h2 class="title">Most plugins ask for far more than they use</h2>
     <div class="prose">
-      <p>Install something that connects WordPress to a cloud service and you are usually asked to grant
-      access to everything in the account. That is convenient to build and hard to justify. If the plugin
-      is compromised, or the developer's app registration is, the blast radius is the whole account.</p>
-      <p>Narrower options almost always exist. An app-scoped folder, a read-only token, a single resource
-      instead of a directory. They cost some flexibility and a lot more work, and they mean the plugin
-      cannot reach anything you didn't hand it, even if it has a bug.</p>
+      <p>Install something that connects WordPress to a cloud service and you are usually asked to
+      grant access to everything in the account. Asking for everything is the quickest way to build
+      it. It also means that if the plugin is compromised, or the developer's app registration is,
+      whoever did it has your whole account.</p>
+      <p>Narrower options almost always exist. An app-scoped folder, a read-only token, a single
+      resource instead of a directory. They cost flexibility and a good deal more work. What you get
+      back is that a plugin with a bug in it still cannot reach anything you didn't hand it.</p>
       <p>That is the whole product idea, and it is also why each plugin stays small. One plugin, one job,
       one permission. If you want a suite that does everything, I'm not building that.</p>
     </div>

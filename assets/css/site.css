@@ -57,6 +57,9 @@ body {
 .wrap { max-width: 68rem; margin: 0 auto; padding: 0 1.5rem; }
 
 a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+@media (prefers-reduced-motion: no-preference) {
+  a, .button, .support, .status { transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease; }
+}
 a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-radius: 2px; }
 
 /* ---------- masthead ---------- */
@@ -103,6 +106,10 @@ h1 {
   font-weight: 600; text-decoration: none; border-radius: 3px;
 }
 .button:hover { background: #1A23A6; }
+@media (prefers-reduced-motion: no-preference) {
+  .button:hover, .support:hover { transform: translateY(-1px); }
+  .button:active, .support:active { transform: none; }
+}
 .quiet-link { color: var(--ink-soft); font-weight: 500; font-size: 0.9375rem; }
 
 /* ---------- the one visual: is / isn't ---------- */
@@ -200,11 +207,30 @@ h1 {
   .section { padding-top: 6rem; padding-bottom: 6rem; }
 }
 
+@keyframes settle {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes arrive {
+  from { transform: translateY(10px); }
+  to { transform: none; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .ledger { animation: settle 0.55s ease-out both 0.1s; }
-  @keyframes settle {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: none; }
+  .hero .ledger { animation: settle 0.55s ease-out both 0.1s; }
+
+  /* Everything else arrives as you reach it. Scroll-driven, so no JavaScript and
+     no observer; browsers without the timeline simply show the page. This moves
+     the block and never fades it: if a timeline ever misbehaves, the worst case
+     is text sitting ten pixels low, not text nobody can read. */
+  @supports (animation-timeline: view()) {
+    .section > *,
+    .band .claim {
+      animation: arrive linear both;
+      animation-timeline: view();
+      animation-range: entry 10% entry 45%;
+    }
   }
 }
 
