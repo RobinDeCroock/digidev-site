@@ -41,10 +41,24 @@ DNS for the apex domain, at whoever hosts digital-development.be:
 | A | @ | 185.199.109.153 |
 | A | @ | 185.199.110.153 |
 | A | @ | 185.199.111.153 |
-| CNAME | www | `<username>.github.io` |
+| CNAME | www | `robindecroock.github.io` |
 
 Those four addresses are GitHub's published Pages servers; check them against GitHub's
 documentation before relying on them.
+
+Mail for the domain is at one.com, and the records that prove it are separate from the ones above:
+
+| Type | Name | Value |
+|---|---|---|
+| TXT | @ | `v=spf1 include:_spf.one.com ~all` |
+| TXT | _dmarc | `v=DMARC1; p=none; rua=mailto:info@digital-development.be` |
+
+Without these, anyone can send mail that appears to come from `info@digital-development.be`, and
+mail that really is from that address is more likely to be filtered as spam. Leave DMARC at
+`p=none` until the reports show that everything you send passes, then move it to `p=quarantine`.
+DKIM is signed by one.com itself and is switched on in their control panel, not here. The
+`MS=` and `google-site-verification=` TXT records already on the domain are verification tokens for
+other services; leave them alone, they do not affect mail.
 
 ## Paths
 
