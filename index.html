@@ -109,14 +109,15 @@
     <p class="section-head">How it's built</p>
     <h2 class="title">Most of the code is written by an AI</h2>
     <div class="prose">
-      <p>I work with an AI assistant. It writes most of the PHP; I decide what gets built, judge the
-      design and the data flow, and say no to anything that would need more access than the job
-      requires. I'd rather tell you that than have you work it out from the source.</p>
-      <p>So the code gets checked before a release, and not by eye. The WordPress coding standards
-      and their security rules run over it, the official Plugin Check has to pass, and I test the
-      plugin by hand as an administrator, again as an editor, and once more after deactivating it.
-      The narrow permission does the rest: it limits what a mistake can reach, whoever wrote the
-      line.</p>
+      <p>I work with an AI assistant. It writes most of the PHP. I decide what gets built, and I
+      check the design and the data flow, in particular anything that would ask for more access
+      than the job needs.</p>
+      <p>That is why the checking is done by tools rather than by eye. The WordPress coding
+      standards run over the code with the security rules switched on, and the official Plugin Check
+      has to pass. Before a release I install the plugin on a real site and use it as an
+      administrator and as an editor. Removing it has to leave the site as it was.</p>
+      <p>The narrow permission matters here for the same reason it matters everywhere else on this
+      page. It limits what a bug can reach.</p>
     </div>
   </section>
 
