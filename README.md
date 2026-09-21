@@ -9,6 +9,8 @@ step, no dependencies, served by GitHub Pages.
 index.html                     Home: what DigiDev is, the three rules, the plugin list
 404.html                       Not-found page (uses absolute /assets paths, see below)
 CNAME                          Custom domain for GitHub Pages
+sitemap.xml                    The three pages, by hand; add a line when a page is added
+robots.txt                     Allows everything and points at the sitemap
 .nojekyll                      Serve the files as they are, skip Jekyll
 assets/css/site.css            The whole stylesheet
 assets/fonts/                  Space Grotesk, self-hosted, with its OFL licence
