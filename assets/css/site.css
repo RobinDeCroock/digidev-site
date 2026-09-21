@@ -181,6 +181,11 @@ h1 {
   border: 1px solid var(--rule-strong); border-radius: 999px;
   font-size: 0.8125rem; font-weight: 500; color: var(--ink-soft); white-space: nowrap;
 }
+/* A status that links somewhere is something you can act on, so it takes the
+   blue. The pill already reads as a control, so it drops the underline. */
+a.status { color: var(--blue); border-color: currentColor; text-decoration: none; }
+a.status:hover { background: var(--tint); }
+
 .scopes { font-family: var(--mono); font-size: 0.8125rem; color: var(--blue); }
 
 /* ---------- contact ---------- */
