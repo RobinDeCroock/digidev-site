@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F4F5F9">
 <title>Privacy — DigiDev</title>
 <meta name="description" content="What happens to your data when you visit digital-development.be: no cookies, no analytics, no third-party requests, and a web server log at GitHub.">
 <meta property="og:title" content="Privacy — DigiDev">
@@ -13,6 +14,7 @@
 <link rel="stylesheet" href="../assets/css/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="wrap masthead">
   <a class="brand" href="../">
@@ -22,150 +24,166 @@
     </svg>
     DigiDev
   </a>
-  <nav>
+  <nav aria-label="Main">
     <a href="../#plugins">Plugins</a>
     <a href="../#approach">Approach</a>
     <a href="../#contact">Contact</a>
   </nav>
 </header>
 
-<main>
+<main id="main">
 
-  <section class="wrap subhead">
-    <a class="crumb" href="../">Back to DigiDev</a>
-    <h1>Privacy</h1>
-    <p class="lede">This page says what happens to your data when you read this website. There is
-    not much to tell. The site sets no cookies and loads nothing from another company.</p>
-    <dl class="facts">
-      <div><dt>Responsible</dt><dd>DigiDev, Robin De Croock</dd></div>
-      <div><dt>Enterprise number</dt><dd>0792.493.859</dd></div>
-      <div><dt>Contact</dt><dd>info@digital-development.be</dd></div>
-      <div><dt>Last changed</dt><dd>18 September 2026</dd></div>
-    </dl>
+  <section class="wrap hero page-title">
+    <div>
+      <a class="crumb" href="../">Back to DigiDev</a>
+      <h1>Privacy</h1>
+      <p class="lede">This page says what happens to your data when you read this website. There is
+      not much to tell. The site sets no cookies and loads nothing from another company.</p>
+      <dl class="facts">
+        <div><dt>Responsible</dt><dd>DigiDev, Robin De Croock</dd></div>
+        <div><dt>Enterprise number</dt><dd>0792.493.859</dd></div>
+        <div><dt>Contact</dt><dd>info@digital-development.be</dd></div>
+        <div><dt>Last changed</dt><dd>18 September 2026</dd></div>
+      </dl>
+    </div>
+
+    <article class="slip" aria-labelledby="slip-title">
+      <div class="slip-head">
+        <h2 id="slip-title">What this website does and doesn't do</h2>
+      </div>
+      <dl>
+        <div class="line can"><dt>What reaches me</dt><dd><ul>
+          <li>The web server log kept by GitHub, which hosts this site</li>
+          <li>Anything you write to me yourself, by email</li>
+          <li>A record of your donation, if you leave a tip on Ko-fi</li>
+        </ul></dd></div>
+        <div class="line cannot"><dt>What never happens here</dt><dd><ul>
+          <li>Cookies, of any kind, including &ldquo;functional&rdquo; ones</li>
+          <li>Visitor counting, heatmaps or advertising pixels</li>
+          <li>Fonts, scripts or images loaded from another company</li>
+          <li>An account, a login or a form to fill in</li>
+          <li>Any decision about you made automatically</li>
+        </ul></dd></div>
+      </dl>
+    </article>
   </section>
 
-  <section class="wrap section">
-    <p class="section-head">In short</p>
-    <h2 class="title">What this website does and doesn't do</h2>
+  <div class="wrap">
 
-    <div class="ledger">
-      <div class="ledger-block is">
-        <h2>What reaches me</h2>
-        <ul>
-          <li><span class="glyph">+</span>The web server log kept by GitHub, which hosts this site</li>
-          <li><span class="glyph">+</span>Anything you write to me yourself, by email</li>
-          <li><span class="glyph">+</span>A record of your donation, if you leave a tip on Ko-fi</li>
+    <section class="clause">
+      <p class="num">01</p>
+      <div>
+        <h2>No cookies, so no banner</h2>
+        <div class="prose">
+          <p>Nothing is stored on your device and nothing is read from it, so there is no consent
+          banner. You do not have to give me anything to read this site, and nothing here is required
+          by law or by a contract.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="clause">
+      <p class="num">02</p>
+      <div>
+        <h2>The web server log</h2>
+        <div class="prose">
+          <p>This site is a set of files served by GitHub Pages. Like every web server, GitHub sees the
+          request your browser makes: your IP address, the page you asked for, the time, and what your
+          browser says it is. GitHub uses that to keep the service running and secure. Those logs stay
+          with GitHub. I don't get access to them.</p>
+          <p>The legal ground is legitimate interest, in the sense of article 6(1)(f): a website that
+          nobody can keep online or defend against abuse is of no use to you either. GitHub sets out
+          what it does with the data in
+          <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">what GitHub Pages collects</a>
+          and in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>,
+          including how long it keeps them.</p>
+          <p>GitHub is an American company, so this data leaves the European Union. For those transfers
+          GitHub relies on the European Commission's standard contractual clauses and on its
+          certification under the EU-U.S. Data Privacy Framework. Both are described in the statement
+          linked above.</p>
+          <p>The font is served from this site rather than from a font service, so loading a page
+          involves no other company.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="clause">
+      <p class="num">03</p>
+      <div>
+        <h2>If you write to me</h2>
+        <div class="prose">
+          <p>Support runs on email. A question or a bug report arrives in my mailbox with your address
+          and whatever you put in the message. I use it to answer you and I keep the thread, so I can
+          look up what was said if the same problem comes back later. That is a legitimate interest as
+          well, under the same article: you asked me something and I want to be able to answer it
+          properly.</p>
+          <p>Your address is not added to a mailing list and is not passed on to anyone. The mailbox
+          itself is hosted by one.com, a Danish company, so a message sits on their servers as well as
+          in my mail client, and it stays within the European Union.</p>
+          <p>I have no fixed schedule for clearing out my mailbox; a thread goes when it is no longer
+          any use to either of us. If you ask me to delete a message, I delete it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="clause">
+      <p class="num">04</p>
+      <div>
+        <h2>Tips run through Ko-fi</h2>
+        <div class="prose">
+          <p>The tip link is an ordinary link. Once you click it you are on Ko-fi and their rules apply.
+          Ko-fi handles the payment, so your card details never reach this site or me. What Ko-fi passes
+          on to me about a donation is described in
+          <a href="https://more.ko-fi.com/privacy">Ko-fi's privacy notice</a>.</p>
+          <p>A donation is income, so it goes into my books. That part I keep because the law says I
+          have to, which is article 6(1)(c), and for as long as Belgian bookkeeping and tax rules
+          require. A tip buys nothing in return, so beyond that record I keep no list of who gave
+          one.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="clause">
+      <p class="num">05</p>
+      <div>
+        <h2>The plugins are a separate matter</h2>
+        <div class="prose">
+          <p>A plugin runs on your own website, on your own hosting, with your own accounts. It sends
+          nothing back to me. What a plugin can reach, and what it can never reach, is listed on that
+          plugin's own page, and its settings screen says the same before you connect anything.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="clause">
+      <p class="num">06</p>
+      <div>
+        <h2>What you can ask me to do</h2>
+        <div class="prose prose-before-list">
+          <p>The GDPR gives you the right to ask what I hold about you and to get a copy of it, to have
+          it corrected, to have it deleted, to have the use of it restricted while a disagreement is
+          sorted out, to object to my using it, and to receive it in a form you can take elsewhere.
+          Send an email; there is no form. In practice the only thing I am likely to hold is an email
+          conversation you started.</p>
+          <p>I answer within a month. Nothing here involves automated decisions or profiling, so there
+          is nothing of that sort to object to.</p>
+          <p>You can also take it to the Belgian Data Protection Authority. You do not have to contact
+          me first.</p>
+        </div>
+        <ul class="contact-list">
+          <li><a href="mailto:info@digital-development.be">info@digital-development.be<span>DigiDev, Robin De Croock · enterprise number 0792.493.859</span></a></li>
+          <li><a href="https://www.gegevensbeschermingsautoriteit.be/burger">Gegevensbeschermingsautoriteit<span>Belgian Data Protection Authority</span></a></li>
         </ul>
       </div>
-      <div class="ledger-block isnt">
-        <h2>What never happens here</h2>
-        <ul>
-          <li><span class="glyph">&minus;</span>Cookies, of any kind, including "functional" ones</li>
-          <li><span class="glyph">&minus;</span>Visitor counting, heatmaps or advertising pixels</li>
-          <li><span class="glyph">&minus;</span>Fonts, scripts or images loaded from another company</li>
-          <li><span class="glyph">&minus;</span>An account, a login or a form to fill in</li>
-          <li><span class="glyph">&minus;</span>Any decision about you made automatically</li>
-        </ul>
-      </div>
-    </div>
+    </section>
 
-    <div class="prose prose-after-list">
-      <p>Nothing is stored on your device and nothing is read from it, so there is no consent
-      banner. You do not have to give me anything to read this site, and nothing here is required
-      by law or by a contract.</p>
-    </div>
-  </section>
-
-  <section class="wrap section">
-    <p class="section-head">Hosting</p>
-    <h2 class="title">The web server log</h2>
-    <div class="prose">
-      <p>This site is a set of files served by GitHub Pages. Like every web server, GitHub sees the
-      request your browser makes: your IP address, the page you asked for, the time, and what your
-      browser says it is. GitHub uses that to keep the service running and secure. Those logs stay
-      with GitHub. I don't get access to them.</p>
-      <p>The legal ground is legitimate interest, in the sense of article 6(1)(f): a website that
-      nobody can keep online or defend against abuse is of no use to you either. GitHub sets out
-      what it does with the data in
-      <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">what GitHub Pages collects</a>
-      and in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>,
-      including how long it keeps them.</p>
-      <p>GitHub is an American company, so this data leaves the European Union. For those transfers
-      GitHub relies on the European Commission's standard contractual clauses and on its
-      certification under the EU-U.S. Data Privacy Framework. Both are described in the statement
-      linked above.</p>
-      <p>The font is served from this site rather than from a font service, so loading a page
-      involves no other company.</p>
-    </div>
-  </section>
-
-  <section class="wrap section">
-    <p class="section-head">Email</p>
-    <h2 class="title">If you write to me</h2>
-    <div class="prose">
-      <p>Support runs on email. A question or a bug report arrives in my mailbox with your address
-      and whatever you put in the message. I use it to answer you and I keep the thread, so I can
-      look up what was said if the same problem comes back later. That is a legitimate interest as
-      well, under the same article: you asked me something and I want to be able to answer it
-      properly.</p>
-      <p>Your address is not added to a mailing list and is not passed on to anyone. The mailbox
-      itself is hosted by one.com, a Danish company, so a message sits on their servers as well as
-      in my mail client, and it stays within the European Union.</p>
-      <p>I have no fixed schedule for clearing out my mailbox; a thread goes when it is no longer
-      any use to either of us. If you ask me to delete a message, I delete it.</p>
-    </div>
-  </section>
-
-  <section class="wrap section">
-    <p class="section-head">Donations</p>
-    <h2 class="title">Tips run through Ko-fi</h2>
-    <div class="prose">
-      <p>The tip link is an ordinary link. Once you click it you are on Ko-fi and their rules apply.
-      Ko-fi handles the payment, so your card details never reach this site or me. What Ko-fi passes
-      on to me about a donation is described in
-      <a href="https://more.ko-fi.com/privacy">Ko-fi's privacy notice</a>.</p>
-      <p>A donation is income, so it goes into my books. That part I keep because the law says I
-      have to, which is article 6(1)(c), and for as long as Belgian bookkeeping and tax rules
-      require. A tip buys nothing in return, so beyond that record I keep no list of who gave
-      one.</p>
-    </div>
-  </section>
-
-  <section class="wrap section">
-    <p class="section-head">Plugins</p>
-    <h2 class="title">The plugins are a separate matter</h2>
-    <div class="prose">
-      <p>A plugin runs on your own website, on your own hosting, with your own accounts. It sends
-      nothing back to me. What a plugin can reach, and what it can never reach, is listed on that
-      plugin's own page, and its settings screen says the same before you connect anything.</p>
-    </div>
-  </section>
-
-  <section class="wrap section">
-    <p class="section-head">Your rights</p>
-    <h2 class="title">What you can ask me to do</h2>
-    <div class="prose prose-before-list">
-      <p>The GDPR gives you the right to ask what I hold about you and to get a copy of it, to have
-      it corrected, to have it deleted, to have the use of it restricted while a disagreement is
-      sorted out, to object to my using it, and to receive it in a form you can take elsewhere.
-      Send an email; there is no form. In practice the only thing I am likely to hold is an email
-      conversation you started.</p>
-      <p>I answer within a month. Nothing here involves automated decisions or profiling, so there
-      is nothing of that sort to object to.</p>
-      <p>You can also take it to the Belgian Data Protection Authority. You do not have to contact
-      me first.</p>
-    </div>
-    <ul class="contact-list">
-      <li><a href="mailto:info@digital-development.be">info@digital-development.be</a><span>DigiDev, Robin De Croock · enterprise number 0792.493.859</span></li>
-      <li><a href="https://www.gegevensbeschermingsautoriteit.be/burger">Gegevensbeschermingsautoriteit</a><span>Belgian Data Protection Authority</span></li>
-    </ul>
-  </section>
+  </div>
 
 </main>
 
 <footer class="wrap page-footer">
   <p>DigiDev · Enterprise number 0792.493.859 · Belgium</p>
-  <p><a href="./">Privacy</a></p>
+  <p><a href="./" aria-current="page">Privacy</a></p>
 </footer>
 
 </body>
