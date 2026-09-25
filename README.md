@@ -6,7 +6,7 @@ step, no dependencies, served by GitHub Pages.
 ## Structure
 
 ```
-index.html                     Home: what DigiDev is, the three rules, the plugin list
+index.html                     Home: what DigiDev is and isn't, the register, the three rules
 404.html                       Not-found page (uses absolute /assets paths, see below)
 CNAME                          Custom domain for GitHub Pages
 sitemap.xml                    The three pages, by hand; add a line when a page is added
@@ -74,19 +74,26 @@ page loses its styling; nothing else breaks.
 
 Search the HTML for `TODO`. Currently:
 
-- `WORDPRESS-ORG-USERNAME` in `index.html`, in the profile link that stays commented out until the
-  first plugin is published. WordPress.org is a separate account, so it is not necessarily the
-  GitHub name.
-- Plugin status is hard-coded as "In development" in two places; change both when it goes live.
-- The WordPress.org support forum link on the plugin page, once the plugin is published. Until
-  then the "Report an issue" button is a mailto, on purpose.
+- A WordPress.org profile link in the contact list on the home page. It needs the WordPress.org
+  username, which is a separate account and not necessarily the GitHub name, so it is left out
+  until someone fills it in; do not guess it.
 
 ## Adding a plugin
 
-Copy `plugins/one-folder-gallery/index.html` to `plugins/<new-slug>/index.html` and add an entry to
-the plugin list in `index.html`. Keep the "it can reach / it can never reach" ledger: it is the
-argument the whole site makes.
+1. Copy `plugins/one-folder-gallery/index.html` to `plugins/<new-slug>/index.html` and rewrite it.
+   Keep the slip in its hero: "asks for", "it can reach", "it can never reach". It is the argument
+   the whole site makes, so every line has to match what the plugin really does.
+2. Add a row to the `.register` table in `index.html`: name and one line, the permission, and the
+   status. Newest first.
+3. Add the page to `sitemap.xml`.
 
 If a plugin ever gets a paid add-on, it stays a separate product on its own page section, sold
-through Gumroad, with a `<span class="price">` badge in the list on the home page. The free plugin
-never loses features to it.
+through Gumroad, with a `<span class="price">` badge in the status cell of its register row. The
+free plugin never loses features to it.
+
+## Design checks
+
+`.claude/skills/` holds two review skills for Claude Code. `web-design-guidelines` checks pages
+against a pinned copy of Vercel's Web Interface Guidelines (`rules.md`, MIT); update that file on
+purpose, in its own commit. `redesign-existing-projects` is the redesign audit from Taste Skill
+(MIT), with a note on top that the privacy and no-JavaScript rules in `CLAUDE.md` always win.

@@ -18,32 +18,45 @@ get proposed again.
 ## The argument the site makes
 
 Every plugin does one thing and asks for the narrowest permission the platform offers. That claim
-is the product, so it leads: the home page states it, and every plugin page carries the "it can
-reach / it can never reach" ledger. Do not bury it under feature lists.
+is the product, so it leads: every page opens with a slip about its own subject (the home page:
+what DigiDev is and isn't; a plugin page: what that plugin can and can never reach; the privacy
+page: what the site does and never does), and the first section on the home page is the register,
+with each plugin's permission as a column. Do not bury it under feature lists, and do not put one
+plugin's slip on the home page: it makes the home page and that plugin's page look the same.
 
 Copy is written for a site owner who is not a developer. Plain words, no marketing adjectives, no
 exclamation marks. Say what a thing does, then say what it refuses to do.
 
 ## Design
 
+The logo and the brand colours are fixed; a colour may shift in tint but stays recognisably the
+same. Everything else in this section was set by the owner, not by a designer, and may be
+questioned on its merits.
+
 Tokens live at the top of `assets/css/site.css` and come from the brand: `#F4F5F9` for the page,
-white for raised panels, navy `#101D42` for headings, body text and the band, `#C9CDF9` for
-secondary text on the band and for the price badge. Secondary text on paper is muted navy
+white for raised panels, navy `#101D42` for headings, body text and the slip, `#C9CDF9` for
+secondary text on the slip and for the price badge. Secondary text on paper is muted navy
 (`--ink-soft`, `--ink-faint`), not a brand colour, and every one of them clears 4.5:1.
 Space Grotesk throughout, self-hosted from `assets/fonts/`, never from a font CDN and never
 inside a WordPress admin.
 
 Blue `#232ED1` means one thing only: you can act on this. Links, buttons and the small section
-labels. Do not use it for a surface — white on saturated blue over a full-width band vibrates,
-which is why the band is navy. `#7C84F2` is the accent for dark surfaces, so it appears on the
-band and in the favicon tile, never on paper, where it fails contrast.
+labels. Do not use it for a surface: white on saturated blue vibrates, which is why the slip
+is navy. `#7C84F2` is the accent for dark surfaces, so it appears on the slip and in the favicon
+tile, never on paper, where it fails contrast.
 
 The site is light and has no dark mode. Do not add one on a whim; it would mean reworking every
-token. The page stays neutral so the navy band is the only dark block: one strong surface per
-page, nothing else competing with it.
+token. The page stays neutral so the navy slip in the hero is the only dark block: one strong
+surface per page, nothing else competing with it.
 
-Reuse the existing components (`.ledger`, `.band`, `.claims`, `.plugin`, `.steps`, `.codes`,
-`.note`, `.facts`) before inventing new ones. One accent per page at most.
+Layout: a hero with the claim on the left and the slip on the right, then numbered clauses
+(`.clause` with a `.num`, a heading and content). No small label above every heading; a heading
+says what its section is about on its own. The three rules are a `.rules` list, not three
+columns. Plugins go in the `.register` table, one row each, which turns into stacked rows on a
+phone.
+
+Reuse the existing components (`.slip`, `.clause`, `.rules`, `.register`, `.steps`, `.codes`,
+`.note`, `.facts`, `.contact-list`) before inventing new ones. One accent per page at most.
 
 ## Rules
 
@@ -83,3 +96,7 @@ loses a feature to make room for it.
 2. Tab through it: every link and button needs a visible focus ring.
 3. Check the links, including the relative ones from a plugin page back to the home page.
 4. Confirm no `TODO` or capitalised placeholder is left on a page that is going live.
+5. Run the `web-design-guidelines` skill over the changed pages. Its rules are a pinned copy in
+   `.claude/skills/web-design-guidelines/rules.md`; where they conflict with this file, this file
+   wins. `redesign-existing-projects` is there for a second opinion on the design, not as a
+   routine step.

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F4F5F9">
 <title>DigiDev — small WordPress plugins, minimal access</title>
 <meta name="description" content="DigiDev builds small WordPress plugins that do one thing and ask for the least access they can get away with. Free, GPL, readable PHP.">
 <meta property="og:title" content="DigiDev">
@@ -13,167 +14,171 @@
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="wrap masthead">
-  <a class="brand" href="#top">
+  <a class="brand" href="./">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" role="img" aria-label="DigiDev logo">
       <path fill="#101D42" d="M110.11,33.89c-7.23-3.27-15.26-5.09-23.71-5.09H28.8V115.2H0V0H57.6c23.36,0,43.47,13.9,52.51,33.89Z"/>
       <path fill="#232ED1" d="M144,86.4c0,31.81-25.79,57.6-57.6,57.6H28.8v-28.8h28.8c31.81,0,57.6-25.79,57.6-57.6,0-8.45-1.82-16.48-5.09-23.71,19.99,9.04,33.89,29.15,33.89,52.51Z"/>
     </svg>
     DigiDev
   </a>
-  <nav>
+  <nav aria-label="Main">
     <a href="#plugins">Plugins</a>
     <a href="#approach">Approach</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<main id="top">
+<main id="main">
 
   <section class="wrap hero">
-    <div class="hero-grid">
+    <div>
+      <h1>Small plugins that ask for very little.</h1>
+      <p class="lede">DigiDev makes WordPress plugins that each do one thing and request the least
+      access the platform allows. Free on WordPress.org, plain PHP you can read before you install
+      it, no accounts to create.</p>
+      <div class="actions">
+        <a class="button" href="#plugins">See the plugins</a>
+        <a href="#approach">Why so little access</a>
+      </div>
+    </div>
+
+    <article class="slip" aria-labelledby="slip-title">
+      <div class="slip-head">
+        <h2 id="slip-title">DigiDev in short</h2>
+      </div>
+      <dl>
+        <div class="line can"><dt>What it is</dt><dd><ul>
+          <li>One-purpose WordPress plugins</li>
+          <li>Free, GPL, readable PHP</li>
+          <li>The narrowest permission that does the job</li>
+          <li>Support in writing, by email</li>
+        </ul></dd></div>
+        <div class="line cannot"><dt>What it isn't</dt><dd><ul>
+          <li>Client work or custom development</li>
+          <li>Monthly subscriptions</li>
+          <li>A hosted service with your data on it</li>
+          <li>An all-in-one suite</li>
+        </ul></dd></div>
+      </dl>
+    </article>
+  </section>
+
+  <div class="wrap">
+
+    <section class="clause" id="plugins">
+      <p class="num">01</p>
       <div>
-        <h1>Small plugins that ask for very little.</h1>
-        <p>DigiDev makes WordPress plugins that each do one thing and request the least access the
-        platform allows. Free on WordPress.org, plain PHP you can read before you install it, no
-        accounts to create.</p>
-        <div class="hero-actions">
-          <a class="button" href="#plugins">See the plugins</a>
-          <a class="quiet-link" href="#approach">Why so little access</a>
+        <h2>The plugins</h2>
+        <table class="register">
+          <thead><tr><th scope="col">Plugin</th><th scope="col">Permission</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>
+                <a class="name" href="plugins/one-folder-gallery/">One Folder Gallery for OneDrive</a>
+                <p>Photos from one OneDrive folder as a gallery, with albums and a lightbox.</p>
+              </td>
+              <td data-label="Permission"><span class="scopes" translate="no">Files.ReadWrite.AppFolder · offline_access</span></td>
+              <td data-label="Status"><a href="https://wordpress.org/plugins/one-folder-gallery-for-onedrive/">On WordPress.org</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="prose prose-after-list">
+          <p>The first one is published and free. More will follow the same pattern: one job each, and
+          the narrowest permission the platform offers.</p>
         </div>
       </div>
+    </section>
 
-      <div class="ledger">
-        <div class="ledger-block is">
-          <h2>What DigiDev is</h2>
-          <ul>
-            <li><span class="glyph">+</span>One-purpose WordPress plugins</li>
-            <li><span class="glyph">+</span>Free, GPL, readable PHP</li>
-            <li><span class="glyph">+</span>The narrowest permission that does the job</li>
-            <li><span class="glyph">+</span>Support in writing, by email</li>
-          </ul>
-        </div>
-        <div class="ledger-block isnt">
-          <h2>What it isn't</h2>
-          <ul>
-            <li><span class="glyph">&minus;</span>Client work or custom development</li>
-            <li><span class="glyph">&minus;</span>Monthly subscriptions</li>
-            <li><span class="glyph">&minus;</span>A hosted service with your data on it</li>
-            <li><span class="glyph">&minus;</span>An all-in-one suite</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
-      <h2>Three rules every plugin follows</h2>
-      <div class="claims">
-        <div class="claim">
-          <h3>Least access</h3>
-          <p>A plugin gets the smallest scope the platform offers, even when a broader one would be
-          easier to build against.</p>
-        </div>
-        <div class="claim">
-          <h3>Nothing stored twice</h3>
-          <p>Your data stays where it already lives. No copies on your web server, and none on mine,
-          because there is no server of mine.</p>
-        </div>
-        <div class="claim">
-          <h3>Readable, not minified</h3>
-          <p>What WordPress.org publishes is the code that runs, in plain PHP, so you can read what
-          a plugin sends before you install it.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap section" id="approach">
-    <p class="section-head">Approach</p>
-    <h2 class="title">Most plugins ask for far more than they use</h2>
-    <div class="prose">
-      <p>Install something that connects WordPress to a cloud service and you are usually asked to
-      grant access to everything in the account. Asking for everything is the quickest way to build
-      it. It also means that if the plugin is compromised, or the developer's app registration is,
-      whoever did it has your whole account.</p>
-      <p>Narrower options almost always exist. An app-scoped folder, a read-only token, a single
-      resource instead of a directory. They cost flexibility and a good deal more work. What you get
-      back is that a plugin with a bug in it still cannot reach anything you didn't hand it.</p>
-      <p>That is the whole product idea, and it is also why each plugin stays small. One plugin, one job,
-      one permission. If you want a suite that does everything, I'm not building that.</p>
-    </div>
-  </section>
-
-  <section class="wrap section" id="built">
-    <p class="section-head">How it's built</p>
-    <h2 class="title">Most of the code is written by an AI</h2>
-    <div class="prose">
-      <p>I work with an AI assistant. It writes most of the PHP. I decide what gets built, and I
-      check the design and the data flow, in particular anything that would ask for more access
-      than the job needs.</p>
-      <p>That is why the checking is done by tools rather than by eye. The WordPress coding
-      standards run over the code with the security rules switched on, and the official Plugin Check
-      has to pass. Before a release I install the plugin on a real site and use it as an
-      administrator and as an editor. Removing it has to leave the site as it was.</p>
-      <p>The narrow permission matters here for the same reason it matters everywhere else on this
-      page. It limits what a bug can reach.</p>
-    </div>
-  </section>
-
-  <section class="wrap section" id="plugins">
-    <p class="section-head">Plugins</p>
-    <h2 class="title">The plugins</h2>
-
-    <div class="plugin">
+    <section class="clause" id="approach">
+      <p class="num">02</p>
       <div>
-        <h3><a class="title-link" href="plugins/one-folder-gallery/">One Folder Gallery for OneDrive</a></h3>
-        <p>Shows the photos from one OneDrive folder as a gallery on your site, with albums and a
-        lightbox. It can only reach its own folder: Microsoft refuses the rest at the API level.</p>
-        <p class="scopes">Files.ReadWrite.AppFolder · offline_access</p>
+        <h2>Most plugins ask for far more than they use</h2>
+        <div class="prose">
+          <p>Install something that connects WordPress to a cloud service and you are usually asked
+          to grant access to everything in the account. Asking for everything is the quickest way to
+          build it. It also means that if the plugin is compromised, or the developer's app
+          registration is, whoever did it has your whole account.</p>
+          <p>Narrower options almost always exist. An app-scoped folder, a read-only token, a single
+          resource instead of a directory. They cost flexibility and a good deal more work. What you
+          get back is that a plugin with a bug in it still cannot reach anything you didn't hand it.</p>
+          <p>That is the whole product idea, and it is also why each plugin stays small. One plugin,
+          one job, one permission. If you want a suite that does everything, I'm not building that.</p>
+        </div>
       </div>
-      <a class="status" href="https://wordpress.org/plugins/one-folder-gallery-for-onedrive/">On WordPress.org</a>
-    </div>
+    </section>
 
-    <div class="prose prose-after-list">
-      <p>The first one is published and free. More will follow the same pattern: one job each, and
-      the narrowest permission the platform offers.</p>
-    </div>
-  </section>
+    <section class="clause" id="rules">
+      <p class="num">03</p>
+      <div>
+        <h2>Three rules every plugin follows</h2>
+        <ul class="rules">
+          <li><h3>Least access</h3><p>A plugin gets the smallest scope the platform offers, even when
+          a broader one would be easier to build against.</p></li>
+          <li><h3>Nothing stored twice</h3><p>Your data stays where it already lives. No copies on
+          your web server, and none on mine, because there is no server of mine.</p></li>
+          <li><h3>Readable, not minified</h3><p>What WordPress.org publishes is the code that runs, in
+          plain PHP, so you can read what a plugin sends before you install it.</p></li>
+        </ul>
+      </div>
+    </section>
 
-  <section class="wrap section" id="support">
-    <p class="section-head">Donations</p>
-    <h2 class="title">Free, with a tip jar</h2>
-    <div class="prose">
-      <p>Every plugin here is free and stays free. If one saves you an afternoon, you can leave a
-      one-off tip on Ko-fi. Nobody has to, and nothing on your site changes if you don't.</p>
-      <p>A tip buys nothing in return. No supporter tier, no donor-only features, no faster answer
-      to a question. That is deliberate: the moment a donation comes with something attached it
-      stops being a gift and becomes a sale, with European VAT to charge and paperwork to keep.
-      DigiDev is one person working evenings, and that is not worth the administration. So it
-      stays a gift, and the plugins stay the same for everyone.</p>
-    </div>
-    <div class="cta-row">
-      <a class="support" href="https://ko-fi.com/robindecroock">Leave a tip on Ko-fi</a>
-    </div>
-  </section>
+    <section class="clause" id="built">
+      <p class="num">04</p>
+      <div>
+        <h2>Most of the code is written by an AI</h2>
+        <div class="prose">
+          <p>I work with an AI assistant. It writes most of the PHP. I decide what gets built, and I
+          check the design and the data flow, in particular anything that would ask for more access
+          than the job needs.</p>
+          <p>That is why the checking is done by tools rather than by eye. The WordPress coding
+          standards run over the code with the security rules switched on, and the official Plugin
+          Check has to pass. Before a release I install the plugin on a real site and use it as an
+          administrator and as an editor. Removing it has to leave the site as it was.</p>
+          <p>The narrow permission matters here for the same reason it matters everywhere else on
+          this page. It limits what a bug can reach.</p>
+        </div>
+      </div>
+    </section>
 
-  <section class="wrap section" id="contact">
-    <p class="section-head">Contact</p>
-    <h2 class="title">Written support, no calls</h2>
-    <div class="prose prose-before-list">
-      <p>I'm Robin De Croock, a Power Platform developer in Belgium. DigiDev is what I build in my own time, on my
-      own hardware. I don't take client work or custom development — only products anyone can install.</p>
-    </div>
-    <ul class="contact-list">
-      <li><a href="mailto:info@digital-development.be">info@digital-development.be</a><span>Bug reports and questions</span></li>
-      <li><a href="https://github.com/RobinDeCroock">GitHub</a><span>My profile</span></li>
-      <!-- TODO: add once the first plugin is published; WORDPRESS-ORG-USERNAME is a separate account
-      <li><a href="https://profiles.wordpress.org/WORDPRESS-ORG-USERNAME/">WordPress.org</a><span>Published plugins</span></li>
-      -->
-    </ul>
-  </section>
+    <section class="clause" id="support">
+      <p class="num">05</p>
+      <div>
+        <h2>Free, with a tip jar</h2>
+        <div class="prose">
+          <p>Every plugin here is free and stays free. If one saves you an afternoon, you can leave a
+          one-off tip on Ko-fi. Nobody has to, and nothing on your site changes if you don't.</p>
+          <p>A tip buys nothing in return. No supporter tier, no donor-only features, no faster answer
+          to a question. That is deliberate: the moment a donation comes with something attached it
+          stops being a gift and becomes a sale, with European VAT to charge and paperwork to keep.
+          DigiDev is one person working evenings, and that is not worth the administration. So it
+          stays a gift, and the plugins stay the same for everyone.</p>
+        </div>
+        <div class="cta-row">
+          <a class="support" href="https://ko-fi.com/robindecroock">Leave a tip on Ko-fi</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="clause" id="contact">
+      <p class="num">06</p>
+      <div>
+        <h2>Written support, no calls</h2>
+        <div class="prose prose-before-list">
+          <p>I'm Robin De Croock, a Power Platform developer in Belgium. DigiDev is what I build in my
+          own time, on my own hardware. I don't take client work or custom development, only products
+          anyone can install.</p>
+        </div>
+        <ul class="contact-list">
+          <li><a href="mailto:info@digital-development.be">info@digital-development.be<span>Bug reports and questions</span></a></li>
+          <li><a href="https://github.com/RobinDeCroock">GitHub<span>My profile</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
 
 </main>
 
